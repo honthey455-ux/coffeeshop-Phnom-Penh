@@ -1,0 +1,1005 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Brew & Bean Coffee Shop</title>
+
+<link rel="stylesheet" href="style.css">
+
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+</head>
+
+
+<body>
+
+
+<!-- LOADER -->
+
+<div id="loader">
+
+<div class="coffee-loader">
+<i class="fa-solid fa-mug-hot"></i>
+</div>
+
+</div>
+
+
+
+<!-- HEADER -->
+
+<header>
+
+<div class="nav-container">
+
+
+<a href="#" class="logo"></a>
+
+<i class="fa-solid fa-mug-hot"></i>
+
+BREW & BEAN
+
+</a>
+
+
+
+<div class="menu-btn" id="menuBtn">
+
+<i class="fa-solid fa-bars"></i>
+
+</div>
+
+
+<nav id="navMenu">
+
+<a href="#home">Home</a>
+
+<a href="#menu">Menu</a>
+
+<a href="#about">About</a>
+
+<a href="#review">Reviews</a>
+
+<a href="#contact">Contact</a>
+<a href="#team">Our Team</a>
+</nav>
+
+
+<div class="cart-icon" id="cartBtn">
+
+<i class="fa-solid fa-cart-shopping"></i>
+
+<span id="cartCount">0</span>
+
+</div>
+
+
+<i id="darkBtn" class="fa-solid fa-moon"></i>
+
+
+</div>
+
+</header>
+
+
+
+
+<!-- HERO -->
+
+
+<section class="hero" id="home">
+
+
+<div class="hero-content">
+
+
+<h1>
+GOOD COFFEE<br>
+GOOD DAY
+</h1>
+
+
+<p>
+Premium coffee, fresh desserts and a cozy atmosphere.
+</p>
+
+
+<a href="#menu" class="btn">
+Explore Menu
+</a>
+
+
+</div>
+
+
+</section>
+
+
+
+
+
+<!-- MENU -->
+
+
+<section class="menu section" id="menu">
+
+
+<h2>Our Menu</h2>
+
+
+<div class="search">
+
+<input id="searchInput"
+placeholder="Search coffee...">
+
+</div>
+
+
+
+
+<div class="filters">
+
+    <button onclick="filterMenu('all')">All</button>
+
+    <button onclick="filterMenu('coffee')">Coffee</button>
+
+    <button onclick="filterMenu('cake')">Cake</button>
+
+    <button onclick="filterMenu('juice')">Juice</button>
+
+    <button onclick="filterMenu('icecream')">Ice Cream</button>
+
+</div>
+
+
+
+
+
+
+<div class="products">
+
+
+
+<div class="card" data-category="coffee">
+
+<img src="images/Americano.jpg">
+
+
+<h3>Iced Americano</h3>
+
+
+<p>
+កាហ្វេខ្មៅក្តៅៗ​ ឈ្ងុយឆ្ងាញ់ប្រកបដោយគុណភាព ផ្តល់ថាមពល និង​ភាពស្រស់ថ្លាពេញមួយថ្ងៃ
+</p>
+
+
+<h4>$2.50</h4>
+
+
+<button onclick="addCart('Iced Americano',1.75)">
+Add Cart
+</button>
+
+
+</div>
+
+
+
+
+
+<div class="card" data-category="coffee">
+
+
+<img src="images/Chocolate with Marshmallows.jpg">
+
+
+<h3>Chocolate with Marshmallows</h3>
+
+
+<p>
+កាកាវក្តៅផ្អែមល្មម​ លាយឡំជាមួយម៉ាសម៉ាឡូទន់ល្មើយ រលាយក្នងមាត់ ផ្តល់អារម្មណ៍
+កក់ក្តៅនិង រីករាយ។
+</p>
+
+
+<h4>$2.50</h4>
+
+
+<button onclick="addCart('Caramel Latte',2.50)">
+Add Cart
+</button>
+
+
+</div>
+
+
+
+
+
+
+<div class="card" data-category="coffee">
+
+
+<img src="images/Iced Latte.jpg">
+
+
+<h3>Iced Latte</h3>
+
+
+<p>
+ការរួមផ្សំយ៉ាងល្អឥតខ្ចោះរវាងកាហ្វេឈ្ងុយឆ្ងាញ់​ និង​ ទឹកដោះគោស្រស់ត្រជាក់ចិត្ត
+</p>
+
+
+<h4>$2.25</h4>
+
+
+<button onclick="addCart('Iced Cappuccino',2.25)">
+Add Cart
+</button>
+
+
+</div>
+
+
+
+
+
+
+<div class="card" data-category="coffee">
+
+
+<img src="images/Mocha.jpg">
+
+
+<h3>Hot Mocha</h3>
+
+
+<p>
+កាកាវក្តៅស្រោបដោយគ្រីមបន្ថែមភាពក្រអូបឈ្ងុយឆ្ងាញ់នៃគ្រាប់អាល់ម៉ុង
+និង​សូលូឡាខាប់។
+</p>
+
+
+<h4>$2.50</h4>
+
+
+<button onclick="addCart('Banana Cake',4.20)">
+Add Cart
+</button>
+
+
+</div>
+
+
+
+
+
+
+<div class="card" data-category="juice">
+
+
+<img src="images/Kiwi Drink.jpg">
+
+
+<h3>Kiwi drink</h3>
+
+
+<p>
+មានរសជាតិជូរអែមស្រស់ថ្លា បង្កើនកម្លាំង និងភាពស្រស់ស្រាយ។
+</p>
+
+
+<h4>$2.20</h4>
+
+
+<button onclick="addCart('Mango Juice',3)">
+Add Cart
+</button>
+
+
+</div>
+
+
+ <div class="card" data-category="juice">
+
+
+<img src="images/Iced Orange Ginger Tea.jpg">
+
+
+<h3>Iced Orange Ginger Tea</h3>
+
+
+<p>
+ការរូមផ្សំដ៏ល្អឥតខ្ចោះរវាងតែក្រូចស្រស់ និងខ្ញី
+ផ្តល់ទាំងរសជាតិឆ្ងាញ់និងសុខភាពល្អ។
+</p>
+
+
+<h4>$2.20</h4>
+
+
+<button onclick="addCart('Mango Juice',3)">
+Add Cart
+</button>
+
+
+</div>
+
+
+ <div class="card" data-category="juice">
+
+
+<img src="images/Iced Peach Tea.jpg">
+
+
+<h3>Iced Peach Tea</h3>
+
+
+<p>
+តែផ្លែប៉េសត្រជាក់លាយជាមួយសាច់ប៉េសស្រស់ៗនិងក្លិនប្រហើរនៃជីអង្កាម
+បាត់ស្រេកទឹកភ្លាមៗ។
+</p>
+
+
+<h4>$2.20</h4>
+
+
+<button onclick="addCart('Mango Juice',3)">
+Add Cart
+</button>
+
+
+</div>
+
+
+ <div class="card" data-category="juice">
+
+
+<img src="images/Blue legoon.jpg">
+
+
+<h3>Blue Legoon</h3>
+
+
+<p>
+មានរសជាតិជូរអែមស្រស់ថ្លា មានក្លិនប្រហើរនែក្រូចឆ្មានិងស្លឹកជីអង្កាម។
+</p>
+
+
+<h4>$2.20</h4>
+
+
+<button onclick="addCart('Mango Juice',3)">
+Add Cart
+</button>
+
+
+</div>
+
+
+ <div class="card" data-category="juice">
+
+
+<img src="images/Dragon Truit Smoothie.jpg">
+
+
+<h3>Dragon Fruit Smoothie</h3>
+
+
+<p>
+ស្រការនាគក្រហមក្រឡុកខាប់ៗ ពណ៍ស្រស់ស្អាត ផ្ទុកដោយវីតាមីន
+បិងរសជាតិជូរអែមធម្មជាតិ។
+</p>
+
+
+<h4>$2.20</h4>
+
+
+<button onclick="addCart('Mango Juice',3)">
+Add Cart
+</button>
+
+
+</div>
+
+
+ <div class="card" data-category="juice">
+
+
+<img src="images/Cherry Smoothie.jpg">
+
+
+<h3>Cherry Smoothie</h3>
+
+
+<p>
+ឆេរីក្រឡុកស្រស់ៗ​ រសជាតិផ្អែមល្មមប្រកបដោយភាពទាក់ទាញ
+ញាំហើយចង់ញាំទៀត។
+</p>
+
+
+<h4>$2.20</h4>
+
+
+<button onclick="addCart('Mango Juice',3)">
+Add Cart
+</button>
+
+
+</div>
+
+
+ <div class="card" data-category="juice">
+
+
+<img src="images/Mango Smoothie.jpg">
+
+
+<h3>Mango Smoothie</h3>
+
+
+<p>
+ស្វាយទុំក្រឡុកនិងសាច់ស្វាយទុំស្រស់ៗរស់ជាតិផ្អែមឆ្ងាញ់
+បែបធម្មជាតិពិតៗ​ ។
+</p>
+
+
+<h4>$2.20</h4>
+
+
+<button onclick="addCart('Mango Juice',3)">
+Add Cart
+</button>
+
+
+</div>
+
+
+ <div class="card" data-category="juice">
+
+
+<img src="images/Banana Milkshake Smoothie.jpg">
+
+
+<h3>Banana Smoothie</h3>
+
+
+<p>
+ចេកក្រឡុកជាមួយទឹកដោះគោហើយនិងគ្រីមទន់ល្មើយ ផ្តល់ថាមពល
+រសជាតិឆ្ងាញ់ពិសារ ។
+</p>
+
+
+<h4>$2.20</h4>
+
+
+<button onclick="addCart('Mango Juice',3)">
+Add Cart
+</button>
+
+
+</div>
+
+
+ <div class="card" data-category="juice">
+
+
+<img src="images/Green Smoothie.jpg">
+
+
+<h3>Green Smoothie</h3>
+
+
+<p>
+ទឹកប័រក្រឡុកខាប់ស្មើយ ឈ្ងុយឆ្ងាញ់ប៉ូវកម្លាំង និងល្អបំផុតសម្តាប់សុខភាព ។
+</p>
+
+
+<h4>$2.20</h4>
+
+
+<button onclick="addCart('Mango Juice',3)">
+Add Cart
+</button>
+
+
+</div>
+
+
+ <div class="card" data-category="icecream">
+
+
+<img src="images/Fairy Tale.jpg">
+
+
+<h3>Fairy Tale</h3>
+
+
+<p>
+ការ៉ែមបីរសជាតិមាន វ៉ានីឡា ស្រ្តប៊ឹរី  ប៊្លូប៊ឹរី ។
+</p>
+
+
+<h4>$3.20</h4>
+
+
+<button onclick="addCart('Mango Juice',3)">
+Add Cart
+</button>
+
+
+</div>
+
+
+ <div class="card" data-category="icecream">
+
+
+<img src="images/Ice Cream Flavors.jpg">
+
+
+<h3>Grean  Mansion</h3>
+
+
+<p>
+រសជាតិដើម ការ៉ែមភីស្តាឈីអូពណ៍បៃតងស្រស់ស្អាត ដុតដោយគ្រាប់ភីស្តាឈីអូស្រួយៗ ។
+</p>
+
+
+<h4>$3.20</h4>
+
+
+<button onclick="addCart('Mango Juice',3)">
+Add Cart
+</button>
+
+
+</div>
+
+
+ <div class="card" data-category="icecream">
+
+
+<img src="images/Blueberry Dream.jpg">
+
+
+<h3>Blueberry Dream</h3>
+
+
+<p>
+រសជាតិប៊្លូប៊ឺរីស្រស់ៗ លាយជាមូយការ៉ែមទឺកដោះគោទន់ល្មើយ ។
+</p>
+
+
+<h4>$3.20</h4>
+
+
+<button onclick="addCart('Mango Juice',3)">
+Add Cart
+</button>
+
+
+</div>
+
+
+ <div class="card" data-category="icecream">
+
+
+<img src="images/Creamy Raspberry Cheesecake Ice Cream.jpg">
+
+
+<h3>Raspberry Royal</h3>
+
+
+<p>
+ការ៉ែមវ៉ានីឡាស្រោចដោយទឺកសេរ៉ូមរ៉ាប៊ឺរីពណ៍ក្រហម។
+</p>
+
+
+<h4>$3.20</h4>
+
+
+<button onclick="addCart('Mango Juice',3)">
+Add Cart
+</button>
+
+
+</div>
+
+
+ <div class="card" data-category="cake">
+
+
+<img src="images/Red Velvet Cake.jpg">
+
+
+<h3>Red Velvet Cake</h3>
+
+
+<p> 
+នំខេករេដវ៉ែលវេត សាច់ទន់ល្មើយ គួបផ្សំជាមួយគ្រីមពណ៍ស និងផ្លែស្រ្តប៊េរីស្រស់ៗ ។
+</p>
+
+
+<h4>$3.20</h4>
+
+
+<button onclick="addCart('Mango Juice',3)">
+Add Cart
+</button>
+
+
+</div>
+
+
+ <div class="card" data-category="cake">
+
+
+<img src="images/Triple Chocolate Cake.jpg">
+
+
+<h3>Triple Chocolate cake</h3>
+
+
+<p>
+នំខេកសូកូឡា ស្រោចដោយទឺកសូកូឡាខាប់ និងផ្លែរ៉ាសប៊េរី ។
+</p>
+
+
+<h4>$3.20</h4>
+
+
+<button onclick="addCart('Mango Juice',3)">
+Add Cart
+</button>
+
+
+</div>
+
+
+ <div class="card" data-category="cake">
+
+
+
+<img src="images/Kiwi Cheesecake.jpg">
+
+
+<h3>Kiwi Cheesecake</h3>
+
+
+<p>
+ឈីសខេកតុបតេងដោយកីវីស្រស់ៗ​ រសជាតិជូអែម។
+</p>
+
+
+<h4>$3.20</h4>
+
+
+<button onclick="addCart('Mango Juice',3)">
+Add Cart
+</button>
+
+
+</div>
+
+
+ <div class="card" data-category="cake">
+
+
+<img src="images/Mango Cheesecake.jpg">
+
+
+<h3>Mango Cheesecake</h3>
+
+
+<p>
+ខេកស្វាយទុំស្រស់ៗ ជាមួយនិងគ្រីមទន់ល្មើយ។
+</p>
+
+
+<h4>$3.20</h4>
+
+
+<button onclick="addCart('Mango Juice',3)">
+Add Cart
+</button>
+
+
+</div>
+
+
+ <div class="card" data-category="cake">
+
+
+<img src="images/Banana Cream Cheesecake.jpg">
+
+
+<h3>Banana Cream Cheesecake</h3>
+
+
+<p>
+ឈីសខេកចេកអំបូង ឈ្ងុយប្រហើរនិងទន់ល្មើយ រលាយចូលមាត់ភ្លាមៗ ។
+</p>
+
+
+<h4>$3.20</h4>
+
+
+<button onclick="addCart('Mango Juice',3)">
+Add Cart
+</button>
+
+
+</div>
+
+
+ <div class="card" data-category="cake">
+
+
+<img src="images/Oreo  Strawberry Cheesecake.jpg">
+
+
+<h3>Oreo Strawberry Cheesecake</h3>
+
+
+<p>
+ការបូកបញ្ចូលគ្នានៃ អូវីអូស្រួយស្រែប និងឈីសខេក ស្រ្តប៊េរី។
+</p>
+
+
+<h4>$3.20</h4>
+
+
+<button onclick="addCart('Mango Juice',3)">
+Add Cart
+</button>
+
+
+</div>
+
+
+ <div class="card" data-category="cake">
+
+
+<img src="images/Cheesecake With Chocolate Sauce.jpg">
+
+
+<h3>Classic Cheesecake With Chocolate Sauce</h3>
+
+
+<p>
+សាច់ទន់រលោង ស្រោចទឺកសូកូឡា រសជាតិឈ្ងុយឆ្ងាញ់មិនទ្រលាន់។
+</p>
+
+
+<h4>$3.20</h4>
+
+
+<button onclick="addCart('Mango Juice',3)">
+Add Cart
+</button>
+
+
+</div>
+
+
+
+</div>
+
+
+</section>
+
+
+
+
+
+<!-- CART -->
+
+
+<div id="cartBox">
+
+
+<h2>Your Cart</h2>
+
+
+<div id="cartItems">
+
+Empty
+
+</div>
+
+
+<h3>
+Total : $<span id="total">0</span>
+</h3>
+
+
+<button onclick="checkout()">
+Checkout
+</button>
+
+
+</div>
+
+
+
+
+
+
+<!-- ABOUT -->
+
+
+<section class="about section" id="about">
+
+
+<h2>About Us</h2>
+
+
+<p>
+
+
+
+Welcome to Brew & Bean Coffee Shop, where every cup of coffee is crafted with passion and care. We are dedicated to serving premium-quality coffee made from carefully selected beans, along with fresh desserts and refreshing drinks.
+
+Our coffee shop is designed to provide a warm, relaxing, and comfortable atmosphere for everyone. Whether you're meeting friends, working on your laptop, studying, or simply taking a break, Brew & Bean is the perfect place to enjoy your favorite drink.
+
+We believe that great coffee brings people together. That's why we focus on excellent customer service, fresh ingredients, and a memorable café experience. Every visit is an opportunity to enjoy delicious coffee, friendly hospitality, and a cozy environment.
+
+Thank you for choosing Brew & Bean Coffee Shop. We look forward to welcoming you and making every cup a special one.
+
+</p>
+
+
+</section>
+
+
+
+
+
+
+<!-- REVIEWS -->
+
+
+<section class="reviews section" id="review">
+
+
+<h2>Customer Reviews</h2>
+
+
+<div class="review-box">
+
+
+⭐⭐⭐⭐⭐
+
+<p>
+Best coffee shop in Phnom Penh.
+</p>
+
+
+</div>
+
+
+
+<div class="review-box">
+
+
+⭐⭐⭐⭐⭐
+
+<p>
+Amazing Latte and friendly service.
+</p>
+
+
+</div>
+
+
+</section>
+
+
+<!-- CONTACT -->
+
+<section class="contact section" id="contact">
+    <h2>Contact Us</h2>
+   
+
+<p>📍 <strong>Address:</strong> Street 271, Phnom Penh, Cambodia</p>
+
+<p>📞 <strong>Phone:</strong> +855 96 608 8980</p>
+
+<p>✉ <strong>Email:</strong> brewbean@gmail.com</p>
+
+<p>🕒 <strong>Opening Hours:</strong><br>
+Monday – Friday: 7:00 AM – 9:00 PM<br>
+Saturday – Sunday: 8:00 AM – 10:00 PM
+</p>
+
+<p>🌐 <strong>Follow Us:</strong><br>
+Facebook: Brew & Bean Coffee Shop<br>
+Instagram: @brewandbeancoffee<br>
+Telegram: @BrewBeanCoffee
+</p>
+
+<p>
+If you have any questions, feedback, or would like to make a reservation, please don't hesitate to contact us. Our team is always happy to help and looks forward to serving you with the best coffee and a warm welcome.
+</p>
+     
+    </div>
+</section>
+
+<!-- =======================
+     OUR TEAM
+======================= -->
+
+<section class="team" id="team">
+
+    <h2>Our Team</h2>
+
+    <div class="team-container">
+
+        <div class="team-card">
+            <img src="images/Hon_2026-02-18_17-00-04.jpg" alt="Alex">
+            <h3>They Hon</h3>
+            <p></p>
+        </div>
+
+        <div class="team-card">
+            <img src="images/Sivpeang_5846.JPG" alt="Sarah">
+            <h3>Khorn Sivpheng</h3>
+            <p></p>
+        </div>
+
+        <div class="team-card">
+            <img src="images/KANHA.jpg" alt="David">
+            <h3>Heam Kanha</h3>
+            <p></p>
+        </div>
+
+        <div class="team-card">
+            <img src="images/SOKKHIM.PNG" alt="Emma">
+            <h3>Seing Sokkhim</h3>
+            <p></p>
+        </div>
+
+        <div class="team-card">
+            <img src="images/LIZA.jpg" alt="Michael">
+            <h3>Srun Liza</h3>
+            <p></p>
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<footer>
+
+
+<p>
+© 2026 Brew & Bean Coffee Shop
+</p>
+
+
+
+</footer>
+
+
+
+
+
+
+<button id="topBtn">
+<i class="fa-solid fa-arrow-up"></i>
+</button>
+
+
+<script src="script.js"></script>
+
+</body>
+
+</html>

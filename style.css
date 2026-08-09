@@ -1,0 +1,768 @@
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+}
+
+
+body{
+font-family:'Poppins',sans-serif;
+background:#f7f3ee;
+color:#222;
+transition:.3s;
+}
+
+
+html{
+scroll-behavior:smooth;
+}
+
+
+.section{
+padding:70px 8%;
+}
+
+
+/* LOADER */
+
+#loader{
+
+position:fixed;
+width:100%;
+height:100%;
+background:#2b1704;
+display:flex;
+justify-content:center;
+align-items:center;
+z-index:9999;
+
+}
+
+
+.coffee-loader i{
+
+font-size:60px;
+color:#c88a48;
+animation:coffee 1s infinite alternate;
+
+}
+
+
+@keyframes coffee{
+
+from{
+transform:translateY(-10px);
+}
+
+to{
+transform:translateY(10px);
+}
+
+}
+
+
+
+
+/* HEADER */
+
+header{
+
+background:#2b1704;
+position:sticky;
+top:0;
+z-index:1000;
+
+}
+
+
+.nav-container{
+
+max-width:1200px;
+margin:auto;
+padding:18px 8%;
+
+display:flex;
+align-items:center;
+justify-content:space-between;
+
+}
+
+
+.logo{
+
+color:white;
+font-family:'Playfair Display',serif;
+font-size:25px;
+font-weight:bold;
+
+}
+
+
+.logo i{
+
+color:#c88a48;
+
+}
+
+
+
+nav{
+
+display:flex;
+gap:30px;
+
+}
+
+
+nav a{
+
+color:white;
+text-decoration:none;
+font-weight:500;
+transition:.3s;
+
+}
+
+
+nav a:hover{
+
+color:#c88a48;
+
+}
+
+
+
+.menu-btn{
+
+display:none;
+color:white;
+font-size:25px;
+cursor:pointer;
+
+}
+
+
+/* CART */
+
+
+.cart-icon{
+
+color:white;
+font-size:22px;
+cursor:pointer;
+position:relative;
+
+}
+
+
+#cartCount{
+
+position:absolute;
+top:-12px;
+right:-12px;
+
+background:red;
+color:white;
+
+width:20px;
+height:20px;
+
+border-radius:50%;
+
+font-size:12px;
+
+display:flex;
+align-items:center;
+justify-content:center;
+
+}
+
+
+
+
+/* HERO */
+
+
+.hero{
+    height:90vh;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    text-align:center;
+}
+
+.hero-content{
+    text-align:center;
+}
+
+.btn{
+    display:inline-block;
+    padding:12px 30px;
+    background:#c88a48;
+    color:#fff;
+    text-decoration:none;
+    border-radius:30px;
+    margin-top:20px;
+}
+
+
+.hero h1{
+
+font-family:'Playfair Display',serif;
+font-size:55px;
+
+}
+
+
+.hero p{
+
+margin:20px 0;
+
+}
+
+
+
+.btn{
+
+background:#c88a48;
+color:white;
+
+padding:12px 30px;
+
+border-radius:30px;
+
+text-decoration:none;
+
+display:inline-block;
+
+}
+
+
+
+
+/* MENU */
+
+
+.menu h2,
+.about h2,
+.reviews h2,
+.contact h2{
+
+text-align:center;
+
+font-family:'Playfair Display',serif;
+
+font-size:40px;
+
+margin-bottom:40px;
+
+}
+
+
+
+
+.search{
+
+text-align:center;
+margin-bottom:30px;
+
+}
+
+
+.search input{
+
+width:350px;
+max-width:90%;
+
+padding:12px 20px;
+
+border-radius:30px;
+
+border:2px solid #c88a48;
+
+}
+
+
+
+.filters{
+
+text-align:center;
+margin-bottom:40px;
+
+}
+
+
+.filters button{
+
+background:#c88a48;
+border:none;
+
+color:white;
+
+padding:10px 25px;
+
+border-radius:25px;
+
+margin:5px;
+
+cursor:pointer;
+
+}
+
+
+
+
+.products{
+
+display:grid;
+
+grid-template-columns:
+repeat(auto-fit,minmax(250px,1fr));
+
+gap:30px;
+
+}
+
+
+
+.card{
+
+background:white;
+
+border-radius:20px;
+
+overflow:hidden;
+
+box-shadow:0 10px 25px rgba(0,0,0,.1);
+
+text-align:center;
+
+padding-bottom:20px;
+
+transition:.3s;
+
+}
+
+
+
+.card:hover{
+
+transform:translateY(-10px);
+
+}
+
+
+
+.card img{
+    width:100%;
+    height:300px;
+    object-fit:contain;
+    background:#fff;
+}
+
+
+
+.card h3{
+
+margin-top:15px;
+
+}
+
+
+.card h4{
+
+color:#c88a48;
+
+font-size:22px;
+
+margin:10px;
+
+}
+
+
+
+.card button,
+#cartBox button{
+
+background:#2b1704;
+
+color:white;
+
+border:none;
+
+padding:10px 25px;
+
+border-radius:30px;
+
+cursor:pointer;
+
+}
+
+
+
+
+/* CART */
+
+
+#cartBox{
+
+position:fixed;
+
+right:-350px;
+
+top:90px;
+
+width:320px;
+
+max-width:90%;
+
+background:white;
+
+padding:25px;
+
+border-radius:20px;
+
+box-shadow:0 10px 30px rgba(0,0,0,.3);
+
+transition:.4s;
+
+z-index:2000;
+
+}
+
+
+
+#cartBox.show{
+
+right:20px;
+
+}
+
+
+
+
+/* ABOUT */
+
+
+.about{
+
+background:#2b1704;
+
+color:white;
+
+text-align:center;
+
+}
+
+
+
+
+/* REVIEWS */
+
+
+.review-box{
+
+background:white;
+
+padding:25px;
+
+margin:20px auto;
+
+max-width:500px;
+
+border-radius:15px;
+
+text-align:center;
+
+}
+
+
+
+
+/* CONTACT */
+
+
+.contact{
+
+text-align:center;
+
+}
+
+
+
+
+footer{
+
+background:#1a0e02;
+
+color:white;
+
+text-align:center;
+
+padding:20px;
+
+}
+
+
+
+
+/* DARK MODE */
+
+
+.dark{
+
+background:#121212;
+color:white;
+
+}
+
+
+.dark .card,
+.dark .review-box,
+.dark #cartBox{
+
+background:#222;
+color:white;
+
+}
+.dark header{
+    background:#000;
+}
+
+
+.dark .card button{
+    background:#c88a48;
+}
+
+
+.dark nav{
+    background:#000;
+}
+
+.card{
+
+animation:showCard .6s ease;
+
+}
+
+
+@keyframes showCard{
+
+from{
+
+opacity:0;
+
+transform:translateY(30px);
+
+}
+
+to{
+
+opacity:1;
+
+transform:translateY(0);
+
+}
+
+}
+
+
+/* TOP BUTTON */
+
+
+#topBtn{
+
+display:none;
+
+position:fixed;
+
+right:20px;
+bottom:20px;
+
+width:45px;
+height:45px;
+
+border:none;
+
+border-radius:50%;
+
+background:#c88a48;
+
+color:white;
+
+font-size:20px;
+
+}
+
+
+
+/* MOBILE */
+
+@media(max-width:768px){
+
+
+.menu-btn{
+
+display:block;
+
+}
+
+
+nav{
+
+position:absolute;
+
+top:70px;
+
+left:0;
+
+width:100%;
+
+background:#2b1704;
+
+display:none;
+
+flex-direction:column;
+
+text-align:center;
+
+padding:20px;
+
+}
+
+
+nav.active{
+
+display:flex;
+
+}
+
+
+.hero h1{
+
+font-size:35px;
+
+}
+.logo i{
+    color:#c88a48;
+    margin-right:10px;
+}
+
+}
+```css
+/* =======================
+   BEAUTIFUL TEAM
+======================= */
+
+.team {
+    padding: 80px 8%;
+    background: #f8f3ed;
+    text-align: center;
+}
+
+.team h2 {
+    font-family: 'Playfair Display', serif;
+    font-size: 40px;
+    color: #4b2e20;
+    margin-bottom: 45px;
+}
+
+.team-container {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 25px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.team-card {
+    background: #ffffff;
+    padding: 25px 18px;
+    border-radius: 22px;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.10);
+    transition: 0.3s ease;
+    text-align: center;
+    overflow: hidden;
+}
+
+.team-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 35px rgba(75, 46, 32, 0.20);
+}
+
+.team-card img {
+    width: 150px;
+    height: 150px;
+    object-fit: cover;
+    object-position: center top;
+    border-radius: 50%;
+    border: 5px solid #c88a48;
+    padding: 3px;
+    background: #ffffff;
+    display: block;
+    margin: 0 auto 18px;
+    transition: 0.3s ease;
+}
+
+.team-card:hover img {
+    transform: scale(1.05);
+    border-color: #8b5e34;
+}
+
+.team-card h3 {
+    color: #4b2e20;
+    font-size: 19px;
+    margin: 10px 0;
+}
+
+.team-card p {
+    color: #8b6f5a;
+    font-size: 14px;
+}
+
+/* =======================
+   DARK MODE
+======================= */
+
+.dark .team {
+    background: #181818;
+}
+
+.dark .team-card {
+    background: #222222;
+}
+
+.dark .team-card h3 {
+    color: #c88a48;
+}
+
+.dark .team-card p {
+    color: #cccccc;
+}
+
+/* =======================
+   TABLET
+======================= */
+
+@media (max-width: 1100px) {
+    .team-container {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+/* =======================
+   MOBILE
+======================= */
+
+@media (max-width: 700px) {
+    .team-container {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+
+    .team-card img {
+        width: 140px;
+        height: 140px;
+    }
+}
+
